@@ -9,7 +9,7 @@ import clouds from "/HeavyCloud.png";
 import lightCloud from "/LightCloud.png"
 import hail from "/Hail.png";
 import { BiCurrentLocation } from "react-icons/bi";
-import React from "react";
+import { process } from "../../../env";
 import WeatherInfo from "../WeatherInfo/WeatherInfo";
 import Loader from "../../Utils/Loader";
 import ImageLoader from "../../Utils/ImageLoader";

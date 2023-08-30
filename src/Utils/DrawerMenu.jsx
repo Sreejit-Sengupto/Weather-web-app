@@ -10,6 +10,7 @@ import {
 } from "@chakra-ui/react";
 import React from "react";
 import Search from "../Components/Search";
+import { process } from "../../env";
 
 function DrawerMenu({ setWeatherData }) {
   const { isOpen, onOpen, onClose } = useDisclosure();
