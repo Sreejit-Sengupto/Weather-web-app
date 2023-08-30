@@ -38,8 +38,8 @@ function App() {
 
   return (
     <div className="flex flex-col lg:flex-row">
-      <SidePanel weatherData={weatherData} setWeatherData={setWeatherData} />
-      <MainPanel weatherData={weatherData} />
+      {/* <SidePanel weatherData={weatherData} setWeatherData={setWeatherData} />
+      <MainPanel weatherData={weatherData} /> */}
     </div>
   );
 }
