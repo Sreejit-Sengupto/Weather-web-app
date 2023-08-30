@@ -2,7 +2,7 @@
 const handler = async (event) => {
   try {
     // const subject = event.queryStringParameters.name || 'World'
-    const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${event.latitude}&lon=${event.longitude}&appid=${process.env.API_KEY}`)
+    const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=25.3176&lon=82.9739&appid=${process.env.API_KEY}`)
     return {
       statusCode: 200,
       body: JSON.stringify({ reply: response.data }),
