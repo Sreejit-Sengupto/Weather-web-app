@@ -1,6 +1,6 @@
 import React from "react";
 import WeatherCard from "./WeatherCard";
-import Aqi from "./AQI";
+import Aqi from "./Aqi";
 
 function MainPanel({ weatherData }) {
   return (
