@@ -5,7 +5,7 @@ const handler = async (event) => {
     const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=25.3176&lon=82.9739&appid=${process.env.API_KEY}`)
     return {
       statusCode: 200,
-      body: { message: response },
+      body: JSON.stringify({ message: response }),
       // body: JSON.stringify({ message: `Hello ${subject}` }),
       // // more keys you can return:
       // headers: { "headerName": "headerValue", ... },
