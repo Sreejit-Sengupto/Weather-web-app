@@ -38,7 +38,7 @@ function App() {
 
   React.useEffect(() => {
     fetch(url)
-      // .then(response => response.json())
+      .then(response => response.json())
       .then(response => console.log(response))
   })
 
