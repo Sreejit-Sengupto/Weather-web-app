@@ -1,5 +1,4 @@
 import React from "react";
-import { process } from "../../../env";
 function Aqi() {
   const [aq, setAq] = React.useState(null);
 
