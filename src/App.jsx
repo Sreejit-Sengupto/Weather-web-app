@@ -1,6 +1,5 @@
 import SidePanel from "./Components/Sidepanel/SidePanel";
 import React from "react";
-import { process } from "../env";
 import MainPanel from "./Components/MainPanel/MainPanel";
 
 function App() {
