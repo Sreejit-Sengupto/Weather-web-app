@@ -5,6 +5,7 @@ import MainPanel from "./Components/MainPanel/MainPanel";
 
 function App() {
   const [weatherData, setWeatherData] = React.useState(null);
+  const url = 'https://skyvue.netlify.app/.netlify/functions/fetchAPI'
   React.useEffect(() => {
     if ("geolocation" in navigator) {
       navigator.geolocation.getCurrentPosition(
@@ -13,10 +14,11 @@ function App() {
           localStorage.setItem("lat", latitude);
           localStorage.setItem("lng", longitude);
           fetch(
-            `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${process.env.API_KEY}`
+            url
           )
             .then((response) => response.json())
-            .then((response) => setWeatherData(response));
+            .then((response) => console.log(response))
+            // .then((response) => setWeatherData(response));
         },
         (error) => {
           console.error("Error getting location:", error.message);
