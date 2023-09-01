@@ -10,22 +10,22 @@ function Aqi() {
       backgroundColor:
         aq[0].main.aqi === 1
           ? "#4BB543"
-          : aq.main.aqi === 2
+          : aq[0].main.aqi === 2
           ? "#FFB20F"
-          : aq.main.aqi === 3
+          : aq[0].main.aqi === 3
           ? "#FF6700"
-          : aq.main.aqi === 4
+          : aq[0].main.aqi === 4
           ? "#E71D36"
           : "#7B0828",
     };
     airQuality =
       aq[0].main.aqi === 1
         ? "Good"
-        : aq.main.aqi === 2
+        : aq[0].main.aqi === 2
         ? "Fair"
-        : aq.main.aqi === 3
+        : aq[0].main.aqi === 3
         ? "Moderate"
-        : aq.main.aqi === 4
+        : aq[0].main.aqi === 4
         ? "Poor"
         : "Very Poor";
   }
