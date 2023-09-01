@@ -1,11 +1,14 @@
 import React from "react";
 import WeatherCard from "./WeatherCard";
 import Aqi from "./Aqi";
+import Forecast from "./Forecast";
+import Footer from "../../Footer";
 
 function MainPanel({ weatherData }) {
   return (
-    <>
-      <div className="lg:mx-auto lg:w-[50%] lg:flex lg:flex-col">
+    <div className="mx-auto">
+        <Forecast />
+      <div className="lg:mx-auto lg:w-full lg:flex lg:flex-col">
         <p className="text-[#E7E7EB] text-2xl mt-10 flex justify-center items-center">
           Today&apos;s Highlights
         </p>
@@ -32,7 +35,8 @@ function MainPanel({ weatherData }) {
         )}
         <Aqi />
       </div>
-    </>
+        {weatherData && <Footer />}
+    </div>
   );
 }
 

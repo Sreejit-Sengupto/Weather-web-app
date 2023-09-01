@@ -21,7 +21,7 @@ function DrawerMenu({ setWeatherData }) {
   async function getWeather() {
     localStorage.setItem('lat', lat);
     localStorage.setItem('lng', lng);
-    fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lng}&appid=${process.env.API_KEY}`)
+    fetch(`https://skyvue.onrender.com?lat=${lat}&lon=${lng}`)
         .then((response) => (response.json()))
         .then(response => setWeatherData(response))
   }

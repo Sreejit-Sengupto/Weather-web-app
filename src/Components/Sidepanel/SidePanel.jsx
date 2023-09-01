@@ -23,7 +23,7 @@ function SidePanel({ weatherData, setWeatherData }) {
           localStorage.setItem('lat', latitude);
           localStorage.setItem('lng', longitude);
           fetch(
-            `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${process.env.API_KEY}`
+            `https://skyvue.onrender.com?lat=${latitude}&lon=${longitude}`
           )
             .then((response) => response.json())
             .then((response) => setWeatherData(response));

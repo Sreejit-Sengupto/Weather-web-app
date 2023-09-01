@@ -1,5 +1,5 @@
 import React from "react";
-// import { process } from "../../../env";
+import { process } from "../../../env";
 function Aqi() {
   const [aq, setAq] = React.useState(null);
 
@@ -30,15 +30,18 @@ function Aqi() {
         : "Very Poor";
   }
 
+  const lat = localStorage.getItem("lat");
+  const lng = localStorage.getItem("lng");
+
   React.useEffect(() => {
     fetch(
-      `http://api.openweathermap.org/data/2.5/air_pollution?lat=${localStorage.getItem(
+      `https://skyvue.onrender.com/aqi?lat=${localStorage.getItem(
         "lat"
-      )}&lon=${localStorage.getItem("lng")}&appid=${process.env.API_KEY}`
+      )}&lon=${localStorage.getItem("lng")}`
     )
       .then((repsonse) => repsonse.json())
       .then((response) => setAq(response.list[0]));
-  }, []);
+  }, [lat, lng]);
   return (
     aq && (
       <div className="text-[#E7E7EB] font-raleway mt-20 flex flex-col justify-center items-center">
