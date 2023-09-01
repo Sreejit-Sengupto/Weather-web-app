@@ -40,7 +40,7 @@ function Aqi() {
       )}&lon=${localStorage.getItem("lng")}`
     )
       .then((repsonse) => repsonse.json())
-      .then((response) => setAq(response.list[0]));
+      .then((response) => setAq(response.list));
   }, [lat, lng]);
   return (
     aq && (
