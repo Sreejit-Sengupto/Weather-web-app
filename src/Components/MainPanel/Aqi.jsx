@@ -8,7 +8,7 @@ function Aqi() {
   if (aq) {
     style = {
       backgroundColor:
-        aq.main.aqi === 1
+        aq[0].main.aqi === 1
           ? "#4BB543"
           : aq.main.aqi === 2
           ? "#FFB20F"
@@ -19,7 +19,7 @@ function Aqi() {
           : "#7B0828",
     };
     airQuality =
-      aq.main.aqi === 1
+      aq[0].main.aqi === 1
         ? "Good"
         : aq.main.aqi === 2
         ? "Fair"
@@ -54,29 +54,29 @@ function Aqi() {
             {airQuality}
           </p>
           <p className="py-1">
-            CO - {aq.components.co}
+            CO - {aq[0].components.co}
             <span className="text-[#A09FB1]">μg/m3</span>
           </p>
           <p className="py-1">
-            NO - {aq.components.no}
+            NO - {aq[0].components.no}
             <span className="text-[#A09FB1]">μg/m3</span>
           </p>
           <p className="py-1">
-            NO2 - {aq.components.no2}
+            NO2 - {aq[0].components.no2}
             <span className="text-[#A09FB1]">μg/m3</span>
           </p>
           <p className="py-1">
-            O3 - {aq.components.o3}
+            O3 - {aq[0].components.o3}
             <span className="text-[#A09FB1]">μg/m3</span>
           </p>
           <p className="py-1">
-            SO2 - {aq.components.so2}
+            SO2 - {aq[0].components.so2}
             <span className="text-[#A09FB1]">μg/m3</span>
           </p>
-          <p className="py-1">Fine particle matter - {aq.components.pm2_5}</p>
-          <p className="py-1">Coarse particle matter - {aq.components.pm10}</p>
+          <p className="py-1">Fine particle matter - {aq[0].components.pm2_5}</p>
+          <p className="py-1">Coarse particle matter - {aq[0].components.pm10}</p>
           <p className="py-1">
-            NH3 - {aq.components.nh3}
+            NH3 - {aq[0].components.nh3}
             <span className="text-[#A09FB1]">μg/m3</span>
           </p>
         </div>
